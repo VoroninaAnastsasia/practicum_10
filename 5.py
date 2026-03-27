@@ -10,29 +10,29 @@ taking into account bonuses"""
     except ValueError:
         print("Ошибка: Введите число")
         return None
-    
+
     if card_price == 5 or card_price == 10:
         bonus = 0
         total_value = card_price + bonus
-        print(f"Стоимость карты: ${card_price}, бонус: ${bonus}")
+        print(f"Стоимость карты: {card_price}, бонус: {bonus}")
         return total_value
     
     elif card_price == 25:
         bonus = 3
         total_value = card_price + bonus
-        print(f"Стоимость карты: ${card_price}, бонус: ${bonus}")
+        print(f"Стоимость карты: {card_price}, бонус: {bonus}")
         return total_value
     
     elif card_price == 50:
         bonus = 8
         total_value = card_price + bonus
-        print(f"Стоимость карты: ${card_price}, бонус: ${bonus}")
+        print(f"Стоимость карты: {card_price}, бонус: {bonus}")
         return total_value
     
     elif card_price == 100:
         bonus = 20
         total_value = card_price + bonus
-        print(f"Стоимость карты: ${card_price}, бонус: ${bonus}")
+        print(f"Стоимость карты: {card_price}, бонус: {bonus}")
         return total_value
     
     else:
