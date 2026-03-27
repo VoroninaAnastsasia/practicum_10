@@ -11,7 +11,5 @@ def print_common_multiples(A, B, N):
     
     if not found:
         print("Общих кратных нет")
-    else:
-        print()
-    
+        
 print_common_multiples(7, 11, 50)
