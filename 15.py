@@ -3,19 +3,16 @@ import random
 
 turtle.speed(0)
 
-
-# --- Screen Setup ---
+# Screen setup
 def setup_screen():
     """Configures the turtle graphics window."""
     screen = turtle.Screen()
     screen.bgcolor("midnightblue")
     screen.setup(width=800, height=600)
-    screen.title("Night City Skyline")
     turtle.tracer(0)
     return screen
 
-
-# --- Star Drawing Function ---
+# Star drawing function
 def draw_stars(num_stars):
     """Draws random stars on the night sky."""
     star_turtle = turtle.Turtle()
@@ -30,7 +27,7 @@ def draw_stars(num_stars):
     star_turtle.hideturtle()
 
 
-# --- Moon Drawing Function ---
+# Moon drawing function
 def draw_moon():
     """Draws a crescent moon in the sky."""
     moon_turtle = turtle.Turtle()
@@ -51,7 +48,7 @@ def draw_moon():
     moon_turtle.hideturtle()
 
 
-# --- Ground Drawing Function ---
+# Ground drawing function
 def draw_ground():
     """Draws black ground for buildings to stand on."""
     ground_turtle = turtle.Turtle()
@@ -68,7 +65,7 @@ def draw_ground():
     ground_turtle.end_fill()
 
 
-# --- Rectangular Window Function ---
+# Rectangular window function
 def draw_rect_window(t, x, y, width, height):
     """Draws a rectangular window at given position."""
     t.penup()
@@ -84,7 +81,7 @@ def draw_rect_window(t, x, y, width, height):
     t.end_fill()
 
 
-# --- Round Window Function ---
+# Round window function
 def draw_round_window(t, x, y, size):
     """Draws a round window at given position."""
     t.penup()
@@ -93,7 +90,7 @@ def draw_round_window(t, x, y, size):
     t.color("yellow")
 
 
-# --- Single Building Drawing Function ---
+# Single building drawing function
 def draw_building(x, y_base, width, height, color):
     """Draws a single building with given position, dimensions and color."""
     building_turtle = turtle.Turtle()
@@ -115,7 +112,7 @@ def draw_building(x, y_base, width, height, color):
     draw_windows(x, y_base, width, height)
 
 
-# --- Window Drawing Function ---
+# Window drawing function
 def draw_windows(x, y_base, width, height):
     """Draws structured grid windows on a building (mixed round and rectangular)."""
     window_turtle = turtle.Turtle()
@@ -137,7 +134,7 @@ def draw_windows(x, y_base, width, height):
                     draw_rect_window(window_turtle, wx, wy, 12, 16)
 
 
-#City Generation Function
+# City generation function
 def draw_city():
     """Generates the entire city skyline with front and back building rows."""
     screen = setup_screen()
@@ -162,6 +159,4 @@ def draw_city():
     turtle.update()
     turtle.done()
 
-
-# --- Program Start ---
 draw_city()
