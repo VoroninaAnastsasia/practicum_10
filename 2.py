@@ -19,4 +19,4 @@ def print_fibonacci(n):
     
     print()
 
-print_fibonacci(8)
+print_fibonacci()
